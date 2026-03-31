@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVOCIÓN</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<nav>
+  <div class="nav-inner">
+    <span class="logo" onclick="showPage('home')">DEVOCIÓN</span>
+
+    <!-- desktop links -->
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#" onclick="showPage('brand')">Brand</a>
+        <div class="dropdown">
+          <a href="#" onclick="showPage('brand')">Devoción Difference</a>
+          <a href="#" onclick="showPage('brand')">Our Story</a>
+          <a href="#" onclick="showPage('brand')">Sustainability</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="#" onclick="showPage('location')">Location</a>
+        <div class="dropdown dropdown-light">
+          <a href="#" onclick="showPage('location')">Broadway, NY</a>
+          <a href="#" onclick="showPage('location')">Wall Street, NY</a>
+          <a href="#" onclick="showPage('location')">Flatiron, NY</a>
+          <a href="#" onclick="showPage('location')">The Grove, LA</a>
+          <a href="#" onclick="showPage('location')">Seoul, KR</a>
+        </div>
+      </li>
+      <li><a href="#">Franchise</a></li>
+      <li class="has-dropdown">
+        <a href="#" onclick="showPage('shop')">Shop</a>
+        <div class="dropdown">
+          <a href="#" onclick="showShop('house')">Shop All</a>
+          <a href="#" onclick="showShop('house')" class="bold">House Blends</a>
+          <a href="#" onclick="showShop('limited')">Limited Edition</a>
+          <a href="#" onclick="showShop('merch')">Merch</a>
+          <a href="#" onclick="showShop('house')">Coffee Bundles</a>
+          <a href="#" onclick="showShop('house')">Classes</a>
+          <a href="#" onclick="showShop('house')">Subscription Series</a>
+        </div>
+      </li>
+      <li><a href="#">News</a></li>
+    </ul>
+
+    <!-- mobile hamburger -->
+    <button class="hamburger" id="ham" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- mobile drawer -->
+  <div class="mobile-menu" id="mob-menu">
+    <a class="mob-link" href="#" onclick="showPage('brand');closeMenu()">Brand</a>
+    <div class="mob-sub">
+      <a class="mob-link" href="#" onclick="showPage('brand');closeMenu()">Devoción Difference</a>
+      <a class="mob-link" href="#" onclick="showPage('brand');closeMenu()">Our Story</a>
+      <a class="mob-link" href="#" onclick="showPage('brand');closeMenu()">Sustainability</a>
+    </div>
+    <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">Location</a>
+    <div class="mob-sub">
+      <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">Broadway, NY</a>
+      <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">Wall Street, NY</a>
+      <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">Flatiron, NY</a>
+      <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">The Grove, LA</a>
+      <a class="mob-link" href="#" onclick="showPage('location');closeMenu()">Seoul, KR</a>
+    </div>
+    <a class="mob-link" href="#">Franchise</a>
+    <a class="mob-link" href="#" onclick="showPage('shop');closeMenu()">Shop</a>
+    <div class="mob-sub">
+      <a class="mob-link" href="#" onclick="showShop('house');closeMenu()">House Blends</a>
+      <a class="mob-link" href="#" onclick="showShop('limited');closeMenu()">Limited Edition</a>
+      <a class="mob-link" href="#" onclick="showShop('merch');closeMenu()">Merch</a>
+      <a class="mob-link" href="#" onclick="showShop('house');closeMenu()">Coffee Bundles</a>
+      <a class="mob-link" href="#" onclick="showShop('house');closeMenu()">Classes</a>
+    </div>
+    <a class="mob-link" href="#">News</a>
+  </div>
+
+  <!-- gold sub-nav -->
+  <div class="subnav" id="subnav">
+    <a href="#" onclick="showShop('house')"   id="tab-house">House Blends</a>
+    <a href="#" onclick="showShop('limited')" id="tab-limited">Limited Edition</a>
+    <a href="#" onclick="showShop('merch')"   id="tab-merch">Merch</a>
+    <a href="#">Coffee Bundles</a>
+    <a href="#">Classes</a>
+    <a href="#">Subscription Series</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HOME
+============================================================ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-text">
+      <div class="hero-title">DEVO<br>CIÓN</div>
+    </div>
+  </div>
+  <div class="story-section">
+    <div class="story-inner">
+      <!-- REPLACE ▶ story-img.jpg -->
+      <div class="story-img"></div>
+      <div class="story-content">
+        <h2>DEVOCIÓN<em>'s story</em></h2>
+        <p>Devoción began with a Colombian founder who was obsessed with one question: What if New Yorkers could taste Colombian coffee as fresh as the farmers do back home?<br><br>
+        Instead of buying from big exporters, Devoción works directly with small farms across Colombia, building relationships with the farmers who grow their beans. Each batch is roasted within days of arrival — a process that typically takes months in the traditional supply chain.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     BRAND / BEANS
+============================================================ -->
+<div class="page" id="page-brand">
+  <div class="beans-hero">
+    <h1>DEVOCIÓN's Beans</h1>
+    <div class="beans-visual">
+      <div class="beans-stat">
+        <div class="num">400</div>
+        <div class="lbl">of<br>Coffee's<br>1,000+<br>Flavor<br>Components</div>
+        <span class="bracket"></span>
+        <div class="month">Month: &nbsp;1 &nbsp;&nbsp; 5 &nbsp;&nbsp; 6</div>
+      </div>
+      <div class="beans-img-area">
+        <div class="bean-wrap">
+          <!-- REPLACE ▶ bean-top.jpg — 원두 단면 이미지 -->
+          <div class="bean-top"></div>
+          <div class="bean-bl"></div>
+          <div class="bean-br"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="beans-desc">
+    <!-- REPLACE ▶ bean-bag-icon.jpg -->
+    <div class="beans-desc-icon"></div>
+    <p>Coffee is known as a bean, but it's actually the seed of a cherry. 400 of its 1,000+ components directly contribute to the flavor and aroma profiles in brewed coffee. Our speed from origin to roast protects these elements from oxidation, which in turn keeps the flavor intact, making the natural notes that the coffee possesses easy to distinguish.</p>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     LOCATION / MENU
+============================================================ -->
+<div class="page" id="page-location">
+  <div class="location-header">
+    <h1>DEVOCIÓN's Menu</h1>
+  </div>
+  <div class="center-btn">
+    <button class="btn-gold-lg">SHOP MENU</button>
+  </div>
+
+  <div class="menu-cards">
+    <div class="menu-card">
+      <h3>Pastries</h3>
+      <ul>
+        <li>Croissant</li><li>Guava Croissant</li><li>Pancito de Chocolate</li>
+        <li>Banana Bread</li><li>Dulce de Leche Kouign Amann</li>
+        <li>Double Chocolate Cookie</li><li>Leek Parmesan Turnover</li>
+      </ul>
+      <div class="menu-divider">Additional Offerings</div>
+      <ul>
+        <li>Mineral Water · Sparkling or Still</li>
+        <li>&nbsp;</li>
+        <li>Protein Bars</li><li>Almond · Biscoff · Peanut</li>
+        <li>&nbsp;</li>
+        <li>Granola Bowl</li><li>by Eleven Madison Park</li>
+      </ul>
+    </div>
+    <div class="menu-card">
+      <h3>Espresso</h3>
+      <ul>
+        <li>Espresso</li><li>Americano</li><li>Macchiato</li>
+        <li>Cortado</li><li>Cappuccino</li><li>Latte</li><li>Mocha</li>
+      </ul>
+      <div class="menu-divider">Coffee</div>
+      <ul>
+        <li>Drip</li><li>Pour Over</li><li>Draft Cold Brew</li><li>Nitro Cold Brew</li>
+      </ul>
+      <p class="menu-note">Alternative Milks available — Oat / Almond / Pistachio</p>
+      <p class="menu-note">Bring your own cup and get 5% off your coffee order</p>
+    </div>
+    <div class="menu-card">
+      <h3>Aromáticas</h3>
+      <ul>
+        <li style="font-size:0.69rem;color:#666;font-style:italic;">Herbal tea infusions with real fruit, hot or iced</li>
+        <li>&nbsp;</li>
+        <li>· Apple, strawberry & spearmint</li>
+        <li>· Mango, soranny, guanabana,</li>
+        <li>&nbsp;&nbsp; lime & lemon verbena</li>
+      </ul>
+      <div class="menu-divider">Teas</div>
+      <ul>
+        <li style="font-size:0.69rem;color:#666;font-style:italic;">Sourced from Rooibos teas</li>
+        <li>&nbsp;</li>
+        <li>Earl Grey · Breakfast Black · Green</li>
+        <li>Peppermint · Ginger Turmeric</li>
+        <li>Sparkling Iced Tea</li>
+      </ul>
+      <div class="menu-divider">Cascara</div>
+      <ul>
+        <li style="font-size:0.69rem;color:#666;font-style:italic;padding:0 8px;">Sparkling, antioxidant-rich drink from cold-pressed coffee cherries</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="center-btn">
+    <button class="btn-gold-lg">SEASONAL MENU</button>
+  </div>
+
+  <div class="seasonal-grid" style="margin-top:28px;">
+    <div class="seasonal-item">
+      <!-- REPLACE ▶ seasonal-drink-1.jpg -->
+      <div class="seasonal-img"><img src="seasonal-drink-1.jpg" alt="Sugar & Spice Latte" onerror="this.style.display='none'"></div>
+      <div class="seasonal-info">
+        <h3>Seasonal Drink</h3>
+        <div class="sub">Sugar & Spice Latte</div>
+        <p>A sweet & spiced latte with cinnamon, cardamom, a touch of cayenne, and brown sugar</p>
+      </div>
+    </div>
+    <div class="seasonal-item">
+      <!-- REPLACE ▶ seasonal-drink-2.jpg -->
+      <div class="seasonal-img"><img src="seasonal-drink-2.jpg" alt="La Burdick Chocolate" onerror="this.style.display='none'"></div>
+      <div class="seasonal-info">
+        <h3>Seasonal Drink</h3>
+        <div class="sub">La Burdick Drinking Chocolate</div>
+        <p>Named "the absolute best hot chocolate in New York" by the New York Magazine</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-split">
+    <div class="feature-text">
+      <h3>Seasonal Espresso</h3>
+      <div class="sub">Villa Pastora Natural</div>
+      <p>Sweet notes of strawberry jam, raspberry, milk chocolate, and orange liqueur</p>
+      <button class="btn-gold-lg" style="font-size:0.76rem;padding:11px 26px;">SHOP THE BEANS</button>
+    </div>
+    <!-- REPLACE ▶ seasonal-espresso.jpg -->
+    <div class="feature-img"><img src="seasonal-espresso.jpg" alt="Seasonal Espresso" onerror="this.style.display='none'"></div>
+  </div>
+
+  <div class="feature-split rev" style="margin-top:2px;margin-bottom:60px;">
+    <!-- REPLACE ▶ pour-over.jpg -->
+    <div class="feature-img"><img src="pour-over.jpg" alt="Pour Over Bar" onerror="this.style.display='none'"></div>
+    <div class="feature-text">
+      <h3>Pour Over Bar</h3>
+      <div class="sub">La Roca Wush Wush</div>
+      <p>Double-fermentation microlot of an heirloom variety, from our Rare Gems series</p>
+      <button class="btn-gold-lg" style="font-size:0.76rem;padding:11px 26px;">SHOP THE BEANS</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SHOP — HOUSE BLENDS
+============================================================ -->
+<div class="page" id="page-house">
+  <div class="section-header"><h1>DEVOCIÓN<em>'s</em> House Blends</h1></div>
+  <div class="product-section">
+    <div class="product-grid">
+
+  <div class="product-card">
+            <div class="card">
+  <img src="images/toro.jpg" alt="Toro">
+</div>
+        <div class="product-name">Toro</div>
+        <div class="product-notes">Cocoa, Vanilla, Cherry, Almond</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Toro')">Add to Cart</button>
+      </div>
+      
+        <div class="product-card">
+            <div class="card">
+  <img src="images/honey.jpg" alt="Toro">
+</div>
+        <div class="product-name">Honey</div>
+        <div class="product-notes">Honey, Orange, Blossom, Caramel & a Hint of Eucalyptus</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Honey')">Add to Cart</button>
+      </div>
+
+    
+        
+        <div class="product-card">
+            <div class="card">
+  <img src="images/citrus.jpg" alt="Citrus">
+</div>
+        <div class="product-name">Citrus</div>
+        <div class="product-notes">Orange Blossom, Mandarin Peel, Lemongrass, Lemon</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Citrus')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+            <div class="card">
+  <img src="images/sombra.jpg" alt="Sombra">
+</div>
+        <div class="product-name">Sombra</div>
+        <div class="product-notes">Baker's Chocolate, Caramelized Sugar, Cinnamon</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Sombra')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+             <div class="card">
+  <img src="images/wild forest.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Wild Forest</div>
+        <div class="product-notes">Wild berries, Cherry, Agras, Cocoa Butter, Caramel</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Wild Forest')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/el.jpg" alt="el">
+</div>
+        <div class="product-name">El Sol</div>
+        <div class="product-notes">Peach, Caramel, Cinnamon</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('El Sol')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+            <div class="card">
+  <img src="images/decaf.jpg" alt="Decaf">
+</div>
+        <div class="product-name">Decaf</div>
+        <div class="product-notes">Naturally Decaffeinated with Sugarcane EA Process</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Decaf')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/wild forest.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Miti Miti – Half Caff</div>
+        <div class="product-notes">Molasses, Cocoa butter, Vanilla, Flowers</div>
+        <div class="product-price">$24.20</div>
+        <button class="btn-gold" onclick="addCart('Miti Miti')">Add to Cart</button>
+      </div>
+
+    </div>
+
+    
+      <div class="product-name" style="text-align:left;">House Blend Coffee Sampler</div>
+      <div class="product-notes" style="text-align:left;">5 x 2oz sachets of our Signature House Blends</div>
+      <div class="product-price" style="text-align:left;">$24.20</div>
+      <button class="btn-gold" style="align-self:flex-start;" onclick="addCart('Sampler')">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SHOP — LIMITED EDITION
+============================================================ -->
+<div class="page" id="page-limited">
+  <div class="section-header"><h1>DEVOCIÓN<em>'s</em> Limited Edition</h1></div>
+  <div class="product-section">
+    <div class="product-grid">
+
+      <div class="product-card">
+               <div class="card">
+  <img src="images/la.jpg" alt="wild forest">
+</div>
+
+        <div class="product-name">La Divina – Women In Coffee</div>
+        <div class="product-notes">Honey, Clementine, Cocoa Butter</div>
+        <div class="product-price">$26.95</div>
+        <button class="btn-gold" onclick="addCart('La Divina')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/striped.jpg" alt="wild forest">
+</div>
+
+        <div class="product-name">La Roca Wush Wush</div>
+        <div class="product-notes">Concord Grape, Raspberry, Liqueur, Lemon Drop</div>
+        <div class="product-price">$60.75</div>
+        <button class="btn-gold" onclick="addCart('La Roca')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        
+        <div class="card">
+  <img src="images/el par.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Villa Pastora Natural</div>
+        <div class="product-notes">Strawberry Jam, Raspberry, Milk Chocolate, Orange Liqueur</div>
+        <div class="product-price">$41.00</div>
+        <button class="btn-gold" onclick="addCart('Villa Pastora')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+       
+        <div class="card">
+  <img src="images/la.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Nasa We'sx – Indigenous Coffee</div>
+        <div class="product-notes">Pineapple, Rum Raisin, Licorice</div>
+        <div class="product-price">$29.00</div>
+        <button class="btn-gold" onclick="addCart('Nasa Wesx')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+     
+        <div class="card">
+  <img src="images/nasa.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Red Barrel</div>
+        <div class="product-notes">Pomegranate, Cranberry, Blackberry, Lemongrass</div>
+        <div class="product-price">$26.95</div>
+        <button class="btn-gold" onclick="addCart('Red Barrel')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SHOP — MERCH
+============================================================ -->
+<div class="page" id="page-merch">
+  <div class="section-header"><h1>DEVOCIÓN<em>'s</em> Merch</h1></div>
+  <div class="product-section">
+    <div class="merch-grid">
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/coffee.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Coffee Exploreres</div>
+        <div class="product-notes">17oz Capacity Vacuum - Insulated Tumbler</div>
+        <div class="product-price">$44.00</div>
+        <button class="btn-gold" onclick="addCart('Tumbler')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+               <div class="card">
+  <img src="images/dark.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Dark Chocolate Covered Coffee Beans</div>
+        <div class="product-notes">Deliciously Addictive</div>
+        <div class="product-price">$23.50</div>
+        <button class="btn-gold" onclick="addCart('Choc Beans')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/zipper.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Devocion Zipper Tote</div>
+        <div class="product-notes">Handmade in Colombia</div>
+        <div class="product-price">$35.00</div>
+        <button class="btn-gold" onclick="addCart('Tote')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/hat.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Devocion Dad Hat</div>
+        <div class="product-notes">Classic, Relaxed Fit</div>
+        <div class="product-price">$20.00</div>
+        <button class="btn-gold" onclick="addCart('Dad Hat')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+               <div class="card">
+  <img src="images/cold.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Capsule Brew Coffee Carafe</div>
+        <div class="product-notes">The Smoothest Cold Brew Made Simple</div>
+        <div class="product-price">$40.00</div>
+        <button class="btn-gold" onclick="addCart('Carafe')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/kettle.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Over Coffee Kettle</div>
+        <div class="product-notes">An Essential For Every home barista</div>
+        <div class="product-price">$79.00</div>
+        <button class="btn-gold" onclick="addCart('Kettle')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/tin.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Loose Leaf Black Tea Tin</div>
+        <div class="product-notes">4oz Tea Tin</div>
+        <div class="product-price">$24.95</div>
+        <button class="btn-gold" onclick="addCart('Tea Tin')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+              <div class="card">
+  <img src="images/cup.jpg" alt="wild forest">
+</div>
+        <div class="product-name">Signature Cup & Saucer</div>
+        <div class="product-notes">Our Signature Cafe Drinkware</div>
+        <div class="product-price">$22.00</div>
+        <button class="btn-gold" onclick="addCart('Cup Saucer')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+                <div class="card">
+  <img src="images/hat.jpg" alt="wild forest">
+</div>
+        <div class="product-name"> Devocion Dad</div>
+        <div class="product-notes">Hat </div>
+        <div class="product-price">$10.00</div>
+        <button class="btn-gold" onclick="addCart('Gibraltar')">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div>
+    <h4>Shop</h4>
+    <ul>
+      <li><a href="#">Shop all</a></li>
+      <li><a href="#">Subscription Program</a></li>
+      <li><a href="#">House Blends</a></li>
+      <li><a href="#">Limited Editions</a></li>
+      <li><a href="#">Coffee Bundles</a></li>
+      <li><a href="#">Merch</a></li>
+      <li><a href="#">Classes</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Learn</h4>
+    <ul>
+      <li><a href="#">Devocion Difference</a></li>
+      <li><a href="#">Cafe Finder</a></li>
+      <li><a href="#">Coffee Classes</a></li>
+      <li><a href="#">Brew Guides</a></li>
+      <li><a href="#">Sustainability</a></li>
+      <li><a href="#">Loyalty Program</a></li>
+      <li><a href="#">Ambassador Program</a></li>
+      <li><a href="#">Corporate Gifting</a></li>
+      <li><a href="#">SMS Sign up</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Support</h4>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Wholesale Program</a></li>
+      <li><a href="#">Shipping & Returns</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Accessibility</a></li>
+      <li><a href="#">Anonymous Feedback Form</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="cart-notif" id="notif"></div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  let currentShop = 'house';
+
+  /* ---- page switching ---- */
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('subnav').classList.remove('visible');
+
+    if (page === 'shop') {
+      showShop(currentShop);
+      return;
+    }
+    const map = { home: 'page-home', brand: 'page-brand', location: 'page-location' };
+    if (map[page]) document.getElementById(map[page]).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showShop(tab) {
+    currentShop = tab;
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('subnav').classList.add('visible');
+    document.querySelectorAll('.subnav a').forEach(a => a.classList.remove('active'));
+
+    const pages  = { house: 'page-house', limited: 'page-limited', merch: 'page-merch' };
+    const tabIds = { house: 'tab-house',  limited: 'tab-limited',  merch: 'tab-merch' };
+
+    if (pages[tab]) document.getElementById(pages[tab]).classList.add('active');
+    if (tabIds[tab]) document.getElementById(tabIds[tab]).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ---- hamburger ---- */
+  function toggleMenu() {
+    const ham  = document.getElementById('ham');
+    const menu = document.getElementById('mob-menu');
+    ham.classList.toggle('open');
+    menu.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('ham').classList.remove('open');
+    document.getElementById('mob-menu').classList.remove('open');
+  }
+
+  /* ---- cart toast ---- */
+  function addCart(name) {
+    const notif = document.getElementById('notif');
+    notif.textContent = `✓  ${name} added to cart`;
+    notif.classList.add('show');
+    setTimeout(() => notif.classList.remove('show'), 2400);
+  }
+
+  /* start on shop/house */
+  showPage('shop');
+</script>
+</body>
+</html>
